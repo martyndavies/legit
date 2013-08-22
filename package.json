@@ -1,0 +1,19 @@
+{
+  "name": "legit",
+  "version": "0.0.1",
+  "description": "Check that email addresses are really able to accept emails",
+  "main": "index.js",
+  "devDependencies": {
+    "tape": "*"
+  },
+  "scripts": {
+    "test": "tape test/emails.js"
+  },
+  "keywords": [
+    "email",
+    "check",
+    "validation"
+  ],
+  "author": "Martyn Davies",
+  "license": "MIT"
+}
