@@ -2,6 +2,8 @@
 
 A wrapper for the NodeJS Dns.resolveMx method that checks the domain of an email address for valid/existence of MX records.
 
+[![Build Status](https://travis-ci.org/martyndavies/legit.png?branch=master)](https://travis-ci.org/martyndavies/legit)
+
 ## Installation
 
 ```html
