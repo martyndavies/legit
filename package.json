@@ -7,7 +7,7 @@
     "should": "*",
     "mocha": "*"
   },
-  "script":{
+  "scripts": {
     "test": "mocha"
   },
   "keywords": [
