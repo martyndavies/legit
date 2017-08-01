@@ -1,11 +1,11 @@
-var assert = require('assert');
-var should = require('should');
-var legit = require('../');
+const assert = require('assert');
+const should = require('should');
+const legit = require('../');
 
 describe('Testing Emails', function(){
 	describe('Email is legit', function(){
 		it('should return true when email is legit', function(){
-			legit('martyn@sendgrid.com', function(validation, addresses, err){
+			legit('martyn@martyndavies.me', function(validation, addresses, err){
 				validation.should.be.true;
 				should.exist(addresses);
 			});
