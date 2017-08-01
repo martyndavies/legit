@@ -5,9 +5,9 @@ module.exports = function(emailAddress, cb) {
 	let splitEmail = emailAddress.split('@');
 	dns.resolveMx(splitEmail[1], function(err, addresses){
 		if (addresses) {
-			cb(true, addresses, null);
+			cb(null, true, addresses);
 		} else {
-			cb(false, null, err);
+			cb(err, false, null);
 		}
 	});
 };

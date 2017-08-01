@@ -2,8 +2,6 @@
 
 A wrapper for the NodeJS Dns.resolveMx method that checks the domain of an email address for valid/existence of MX records.
 
-[![Build Status](https://travis-ci.org/martyndavies/legit.png?branch=master)](https://travis-ci.org/martyndavies/legit)
-
 ## Installation
 
 ```html
@@ -12,10 +10,10 @@ $ npm install legit
 ## Usage
 
 ```javascript
-var checkEmail = require('legit');
+const legit = require('legit');
 
-checkEmail('martyn@sendgrid.com', function(validation, addresses, err) {
-	if (validation) {
+legit('martyn@martyndavies.me', function(err, validation, addresses) {
+	if (validation == true) {
 		console.log('This is a real email that can accept emails!');
 		console.log(JSON.stringify(addresses));
 	} else {

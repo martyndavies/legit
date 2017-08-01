@@ -5,7 +5,7 @@ const legit = require('../');
 describe('Testing Emails', function(){
 	describe('Email is legit', function(){
 		it('should return true when email is legit', function(){
-			legit('martyn@martyndavies.me', function(validation, addresses, err){
+			legit('martyn@martyndavies.me', function(err, validation, addresses){
 				validation.should.be.true;
 				should.exist(addresses);
 			});
@@ -14,7 +14,7 @@ describe('Testing Emails', function(){
 
 	describe('Email is not legit', function(){
 		it('should return false when email is not legit', function(){
-			legit('nosir@neverwouldibuythisdomainladdyohno.com', function(validation, addresses, err){
+			legit('nosir@neverwouldibuythisdomainladdyohno.com', function(err, validation, addresses){
 				validation.should.be.false;
 				should.not.exist(addresses);
 				should.exist(err);
