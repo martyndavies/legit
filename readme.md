@@ -1,5 +1,7 @@
 # Legit
 
+![Travis CI](https://travis-ci.org/martyndavies/legit.svg?branch=master)
+
 A wrapper for the NodeJS Dns.resolveMx method that checks the domain of an email address for valid/existence of MX records.
 
 ## Installation
