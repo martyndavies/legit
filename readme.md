@@ -16,10 +16,10 @@ const legit = require('legit');
 
 legit('martyn@martyndavies.me', function(err, validation, addresses) {
 	if (validation == true) {
-		console.log('This is a real email that can accept emails!');
-		console.log(JSON.stringify(addresses));
+		console.log('This is a real email that can accept emails!')
+		console.log(JSON.stringify(addresses))
 	} else {
-		console.log('Error: '+ err);
+		console.log('Error: '+ err)
 	}
 });
 ```
