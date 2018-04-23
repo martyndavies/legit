@@ -14,7 +14,7 @@ $ npm install legit
 ```javascript
 const legit = require('legit');
 
-legit('martyn@martyndavies.me')
+legit('validemail@validdomain.com')
   .then(result => {
     console.log('This is a real email that can accept emails!');
     console.log(JSON.stringify(result));
