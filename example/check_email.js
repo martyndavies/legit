@@ -2,7 +2,7 @@ const legit = require("../src/index.js");
 
 legit("martyn@martyndavies.me")
   .then(result => {
-    console.log("This is a real email that can accept emails!");
+    result.isValid ? console.log("Valid!") : console.log("Invalid!");
     console.log(JSON.stringify(result));
   })
-  .catch(err => console.log("This domain cannot accept emails."));
+  .catch(err => console.log(err));

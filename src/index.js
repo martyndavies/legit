@@ -6,9 +6,11 @@ const validateEmailAddress = emailAddress => {
 
     dns.resolveMx(splitEmail[1], (err, mx) => {
       if (typeof mx != "undefined") {
-        resolve({ isValid: true, mxArray: mx });
+        mx
+          ? resolve({ isValid: true, mxArray: mx })
+          : resolve({ isValid: false, mxArray: null });
       } else {
-        reject({ isValid: false, errors: err });
+        reject(err);
       }
     });
   });
