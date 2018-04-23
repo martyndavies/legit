@@ -12,14 +12,14 @@ $ npm install legit
 ## Usage
 
 ```javascript
-const legit = require("../src/index.js");
+const legit = require('legit');
 
-legit("martyn@martyndavies.me")
+legit('martyn@martyndavies.me')
   .then(result => {
-    console.log("This is a real email that can accept emails!");
+    console.log('This is a real email that can accept emails!');
     console.log(JSON.stringify(result));
   })
-  .catch(err => console.log("This domain cannot accept emails."));
+  .catch(err => console.log('This domain cannot accept emails.'));
 ```
 
 If an email addresses domain is legit then the object returned will include an `isValid` key that will be set to `true` as well as an `mxArray` key with all the MX record information for the valid domain.
