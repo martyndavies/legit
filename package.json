@@ -1,10 +1,10 @@
 {
   "name": "legit",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Check that email addresses are really able to accept emails by pinging the DNS and checking for active MX records.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "respository": "https://github.com/martyndavies/legit",
-  "devDependencies":{
+  "devDependencies": {
     "should": "*",
     "mocha": "*"
   },
