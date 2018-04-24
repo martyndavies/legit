@@ -29,6 +29,36 @@ If the domain has no MX or cannot resolve any MX then it will return `isValid` a
 
 Anything else is considered an error and you'll get it in the `.catch`
 
+## Example Response
+For a valid email address, you'll get the following response object:
+
+```json
+{
+   "isValid":true,
+   "mxArray":[
+      {
+         "exchange":"aspmx.l.google.com",
+         "priority":1
+      },
+      {
+         "exchange":"alt1.aspmx.l.google.com",
+         "priority":5
+      },
+      {
+         "exchange":"alt2.aspmx.l.google.com",
+         "priority":5
+      },
+      {
+         "exchange":"alt3.aspmx.l.google.com",
+         "priority":10
+      },
+      {
+         "exchange":"alt4.aspmx.l.google.com",
+         "priority":10
+      }
+   ]
+}
+```
 
 ## License
 
