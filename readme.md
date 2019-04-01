@@ -31,7 +31,7 @@ Anything else is considered an error and you'll get it in the `.catch`
 
 ## Async/Await Usage
 
-For a more modern approach using ES6, you can `await` the reponse to come back before acting on it.
+For a more modern approach using ES6, you can `await` the reponse before acting on it.
 
 ```javascript
 const legit = require('legit');
@@ -82,4 +82,4 @@ For a valid email address, you'll get the following response object:
 
 (The MIT License)
 
-Copyright (c) 2015-2018 Martyn Davies, and contributors.
+Copyright (c) 2015-2019 Martyn Davies, and contributors.
