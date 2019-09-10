@@ -3,7 +3,10 @@
   "version": "1.0.5",
   "description": "Check that email addresses are really able to accept emails by pinging the DNS and checking for active MX records.",
   "main": "./src/index.js",
-  "respository": "https://github.com/martyndavies/legit",
+  "respository": {
+    "type": "git",
+    "url": "https://github.com/martyndavies/legit"
+  },
   "devDependencies": {
     "should": "*",
     "mocha": "*"
