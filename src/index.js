@@ -9,8 +9,10 @@ const validateEmailAddress = emailAddress => {
         mx
           ? resolve({ isValid: true, mxArray: mx })
           : resolve({ isValid: false, mxArray: null });
+      } else if (err.code == 'ENOTFOUND') {
+        resolve({ isValid: false, mxArray: null, mxRecordSetExists: false});
       } else {
-        reject(new Error(err));
+        reject(new Error(err.code));
       }
     });
   });
