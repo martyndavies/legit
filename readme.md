@@ -82,4 +82,4 @@ For a valid email address, you'll get the following response object:
 
 (The MIT License)
 
-Copyright (c) 2015-2019 Martyn Davies, and contributors.
+Copyright (c) 2015-2020 Martyn Davies, and contributors.
