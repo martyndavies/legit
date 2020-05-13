@@ -1,6 +1,6 @@
 {
   "name": "legit",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Check that email addresses are really able to accept emails by pinging the DNS and checking for active MX records.",
   "main": "./src/index.js",
   "repository": {
