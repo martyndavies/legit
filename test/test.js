@@ -5,7 +5,7 @@ const legit = require('../src');
 describe('Testing Emails', function() {
   describe('Email is legit', function() {
     it('should return true when email is legit', function() {
-      legit('martyn@nexmo.com')
+      legit('martyn@vonage.com')
         .then(
           result =>
             result.isValid.should.be.true && should.exist(result.mxArray)
