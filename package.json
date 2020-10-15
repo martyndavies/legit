@@ -1,6 +1,6 @@
 {
   "name": "legit",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Check that email addresses are really able to accept emails by pinging the DNS and checking for active MX records.",
   "main": "./src/index.js",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "should": "*",
-    "mocha": "*"
+    "mocha": "7.0.2"
   },
   "scripts": {
     "test": "mocha"
