@@ -8,8 +8,8 @@
     "url": "https://github.com/martyndavies/legit"
   },
   "devDependencies": {
-    "should": "*",
-    "mocha": "7.2.0"
+    "mocha": "^10.6.0",
+    "should": "*"
   },
   "scripts": {
     "test": "mocha"
