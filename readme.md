@@ -80,4 +80,4 @@ For a valid email address, you'll get the following response object:
 
 (The MIT License)
 
-Copyright (c) 2015-2024 Martyn Davies, and contributors.
+Copyright (c) 2015-2025 Martyn Davies, and contributors.
