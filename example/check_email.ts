@@ -1,4 +1,4 @@
-const legit = require("../src/index.js");
+import legit from '../src';
 
 legit("martyn@notadomainzzzzzzzzz.me")
   .then(result => {
