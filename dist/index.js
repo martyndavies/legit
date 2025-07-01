@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const dns = require('dns');
 const validateEmailAddress = (emailAddress) => {
     return new Promise((resolve, reject) => {
@@ -18,4 +19,4 @@ const validateEmailAddress = (emailAddress) => {
         });
     });
 };
-module.exports = validateEmailAddress;
+exports.default = validateEmailAddress;
