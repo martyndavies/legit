@@ -1,5 +1,7 @@
 # Legit
 
+**BREAKING CHANGE NOTICE (v2.0.0):** Legit has been migrated to TypeScript. This introduces a breaking change in how the module is imported. Please update your code to use ES module imports (`import legit from 'legit'`) instead of `require`.
+
 A wrapper for the NodeJS Dns.resolveMx method that checks the domain of an email address for valid/existence of MX records.
 
 ## Installation
@@ -10,8 +12,8 @@ $ npm install legit
 
 ## Usage
 
-```javascript
-const legit = require("legit");
+```typescript
+import legit from "legit";
 
 legit("validemail@validdomain.com")
   .then((result) => {
@@ -31,8 +33,8 @@ Anything else is considered an error and you'll get it in the `.catch`
 
 For a more modern approach using ES6, you can `await` the response before acting on it.
 
-```javascript
-const legit = require("legit");
+```typescript
+import legit from "legit";
 
 (async () => {
   try {

@@ -1,18 +1,29 @@
 {
   "name": "legit",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "Check that email addresses are really able to accept emails by pinging the DNS and checking for active MX records.",
-  "main": "./src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/martyndavies/legit"
   },
-  "devDependencies": {
-    "mocha": "^10.6.0",
-    "should": "*"
-  },
   "scripts": {
-    "test": "mocha"
+    "build": "tsc",
+    "test": "mocha -r ts-node/register test/**/*.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.0.8",
+    "@types/should": "^11.2.0",
+    "mocha": "^10.6.0",
+    "should": "*",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
   "keywords": [
     "email",
