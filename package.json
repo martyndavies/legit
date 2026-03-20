@@ -30,7 +30,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.0.8",
-    "@types/should": "^11.2.0",
+    "@types/should": "^13.0.0",
     "@types/sinon": "^21.0.0",
     "mocha": "^10.6.0",
     "should": "^13.0.0",
