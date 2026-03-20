@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.1](https://github.com/martyndavies/legit/compare/legit-v3.1.0...legit-v3.1.1) (2026-03-20)
+
+
+### Bug Fixes
+
+* remove erroneous npm config delete that broke publish auth ([ee84e18](https://github.com/martyndavies/legit/commit/ee84e1828bca1baeed80ac8f5dba405ffeadd6cf))
+* scope package name to @martyndavies/legit to resolve npm 404 ([df7ba36](https://github.com/martyndavies/legit/commit/df7ba36c72c06acf3385fcec046a509a0834a3ca))
+
 ## [3.1.0](https://github.com/martyndavies/legit/compare/legit-v3.0.0...legit-v3.1.0) (2026-03-20)
 
 
