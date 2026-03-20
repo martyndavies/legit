@@ -1,5 +1,5 @@
 {
-  "name": "@martyndavies/legit",
+  "name": "legit",
   "version": "3.1.0",
   "description": "Check that email addresses are really able to accept emails by pinging the DNS and checking for active MX records.",
   "main": "dist/index.js",
