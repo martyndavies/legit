@@ -322,4 +322,4 @@ DNS is cached and changes over time. A domain that passes validation today could
 
 ## License
 
-MIT © 2015–2025 Martyn Davies and contributors
+MIT © 2015–2026 Martyn Davies and contributors
