@@ -1,9 +1,19 @@
 {
   "name": "legit",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Check that email addresses are really able to accept emails by pinging the DNS and checking for active MX records.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "files": [
     "dist"
   ],
@@ -13,22 +23,27 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "mocha -r ts-node/register test/**/*.ts",
+    "postbuild": "node scripts/gen-esm-wrapper.js",
+    "test": "mocha -r ts-node/register 'test/**/*.ts' && node test/esm-smoke.mjs",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.0.8",
     "@types/should": "^11.2.0",
+    "@types/sinon": "^21.0.0",
     "mocha": "^10.6.0",
-    "should": "*",
+    "should": "^13.0.0",
+    "sinon": "^21.0.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "keywords": [
     "email",
     "check",
-    "validation"
+    "validation",
+    "dns",
+    "mx"
   ],
   "author": "Martyn Davies",
   "license": "MIT"
