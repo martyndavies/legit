@@ -19,7 +19,7 @@ It does **not** tell you whether a specific mailbox exists. See [Limitations](#l
 ## Installation
 
 ```bash
-npm install legit
+npm install @martyndavies/legit
 ```
 
 ---
@@ -27,7 +27,7 @@ npm install legit
 ## Quick start
 
 ```typescript
-import legit from 'legit';
+import legit from '@martyndavies/legit';
 
 const result = await legit('user@example.com');
 
@@ -76,8 +76,8 @@ Unexpected DNS errors (`ESERVFAIL`, `ECONNREFUSED`, timeout) reject the promise 
 ### `legit(emailAddress, options?)`
 
 ```typescript
-import legit from 'legit';
-import type { LegitOptions, LegitResult } from 'legit';
+import legit from '@martyndavies/legit';
+import type { LegitOptions, LegitResult } from '@martyndavies/legit';
 ```
 
 **Parameters**
@@ -193,7 +193,7 @@ The promise resolves for all expected DNS outcomes. It only **rejects** for two 
 | `Error` | Unexpected DNS failure (`ESERVFAIL`, `ECONNREFUSED`) or timeout | Indicates an infrastructure problem. Consider retrying or degrading gracefully. |
 
 ```typescript
-import legit from 'legit';
+import legit from '@martyndavies/legit';
 
 try {
   const result = await legit(emailFromUser, { timeout: 5000 });
@@ -222,7 +222,7 @@ try {
 ### Express / Fastify registration endpoint
 
 ```typescript
-import legit from 'legit';
+import legit from '@martyndavies/legit';
 
 app.post('/register', async (req, res) => {
   const { email } = req.body;
@@ -251,7 +251,7 @@ app.post('/register', async (req, res) => {
 ### Validating a list of addresses
 
 ```typescript
-import legit from 'legit';
+import legit from '@martyndavies/legit';
 
 async function filterValidAddresses(emails: string[]): Promise<string[]> {
   const results = await Promise.allSettled(
@@ -268,7 +268,7 @@ async function filterValidAddresses(emails: string[]): Promise<string[]> {
 ### Checking which mail server will handle delivery
 
 ```typescript
-import legit from 'legit';
+import legit from '@martyndavies/legit';
 
 const result = await legit('user@example.com');
 
