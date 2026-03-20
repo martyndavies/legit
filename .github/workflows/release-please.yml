@@ -40,9 +40,6 @@ jobs:
           cache: npm
           registry-url: https://registry.npmjs.org
 
-      - name: Remove token placeholder so npm uses OIDC
-        run: npm config delete //registry.npmjs.org/:_authToken
-
       - name: Install dependencies
         run: npm ci
 
@@ -54,3 +51,5 @@ jobs:
 
       - name: Publish
         run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
