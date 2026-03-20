@@ -1,2 +1,2 @@
-import { default as legit } from './index.js';
-export default legit;
+import cjs from './index.js';
+export default cjs.default;

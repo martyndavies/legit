@@ -59,8 +59,10 @@ async function resolveWithFallback(domain) {
         return { isValid: true, mxArray: sorted };
     }
     catch (err) {
-        const error = err;
-        if (error.code === 'ENODATA') {
+        if (!(err instanceof Error))
+            throw err;
+        const code = err.code;
+        if (code === 'ENODATA') {
             // Domain exists but has no MX records.
             // Per RFC 5321 §5.1, fall back to a direct A record lookup.
             try {
@@ -72,10 +74,10 @@ async function resolveWithFallback(domain) {
                 return { isValid: false, mxArray: null, mxRecordSetExists: false };
             }
         }
-        if (error.code === 'ENOTFOUND') {
+        if (code === 'ENOTFOUND') {
             return { isValid: false, mxArray: null, mxRecordSetExists: false };
         }
-        throw new Error(`DNS lookup failed for ${domain}: ${error.message ?? error.code ?? 'unknown error'}`);
+        throw new Error(`DNS lookup failed for ${domain}: ${err.message ?? code ?? 'unknown error'}`);
     }
 }
 /**

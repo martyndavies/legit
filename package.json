@@ -23,16 +23,18 @@
   },
   "scripts": {
     "build": "tsc",
-    "postbuild": "node -e \"require('fs').writeFileSync('dist/index.mjs', \\\"import { default as legit } from './index.js';\\\\nexport default legit;\\\\n\\\")\"",
-    "test": "mocha -r ts-node/register test/**/*.ts",
+    "postbuild": "node scripts/gen-esm-wrapper.js",
+    "test": "mocha -r ts-node/register 'test/**/*.ts' && node test/esm-smoke.mjs",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.0.8",
     "@types/should": "^11.2.0",
+    "@types/sinon": "^21.0.0",
     "mocha": "^10.6.0",
     "should": "^13.0.0",
+    "sinon": "^21.0.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
