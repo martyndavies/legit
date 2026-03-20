@@ -1,4 +1,4 @@
-import 'should';
+import should from 'should';
 import sinon from 'sinon';
 import * as dns from 'dns';
 import legit, { LegitResult, LegitOptions } from '../src';
